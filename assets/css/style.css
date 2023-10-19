@@ -7,10 +7,21 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
-  /* background-color: rgb(111, 109, 109); */
+  background-color: rgb(111, 109, 109);
   /* border: 1px solid black; */
 }
 
 .font-roboto {
   font-family: "Roboto", sans-serif;
+}
+
+.stats {
+  display: flex;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
