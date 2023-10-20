@@ -14,10 +14,6 @@
   font-family: "Roboto", sans-serif;
 }
 
-.stats {
-  display: flex;
-}
-
 body {
   background-color: rgb(111, 109, 109);
   display: flex;
@@ -35,11 +31,11 @@ body {
 h4 {
   padding-bottom: 20px;
 }
-.input-container {
+.container-1 {
   padding-bottom: 20px;
 }
 
-.container {
+.input-container {
   display: flex;
 }
 #input {
@@ -49,7 +45,7 @@ h4 {
   width: 80px;
 }
 
-.stats {
+.container-2 {
   display: flex;
   justify-content: space-between;
 }
