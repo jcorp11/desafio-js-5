@@ -10,7 +10,13 @@ function totalRealizadas() {
 }
 
 function renderTareas() {
-  let html = "";
+  let html = `
+    <tr>
+      <th>ID</th>
+      <th>Tarea</th>
+      <th></th>
+      <th></th>
+    </tr>`;
   tareas.forEach((tarea) => {
     html += tareaHtml(tarea);
   });
@@ -53,7 +59,9 @@ function tareaHtml(tarea) {
   }>
               </td>
               <td>
-                  <button btn-id="${tarea.id}">Eliminar</button>
+              <i class="fas fa-times" btn-id="${
+                tarea.id
+              }" style="color: #dd1313;"></i>
               </td>
           </tr>`;
 }
