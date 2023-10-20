@@ -1,4 +1,4 @@
-const tareas = [
+let tareas = [
   {
     id: 1,
     nombre: "Tarea 1",

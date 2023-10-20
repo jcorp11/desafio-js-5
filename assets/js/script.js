@@ -1,6 +1,8 @@
 import tareas from "./db.js";
 import { totalRealizadas, renderTareas, tareaHtml } from "./functions.js";
 
+let IDs = tareas.length + 1;
+
 const tareasContainer = document.querySelector(".table");
 const totalTareasRealizadas = document.querySelector(".totalRealizadas");
 const totalTareas = document.querySelector(".total");
@@ -13,10 +15,11 @@ renderTareas();
 btnAddtarea.addEventListener("click", (e) => {
   e.preventDefault();
   let newtarea = {
-    id: tareas.length + 1,
+    id: IDs,
     nombre: input.value,
     completada: false,
   };
   tareas.push(newtarea);
+  IDs++;
   renderTareas();
 });
