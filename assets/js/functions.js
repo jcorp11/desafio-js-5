@@ -4,11 +4,14 @@ import {
   tareasContainer,
   totalTareasRealizadas,
   totalTareas,
+  btnAddtarea,
+  input,
 } from "./script.js";
 
 let tareas;
 let myData = JSON.parse(localStorage.getItem("tareas"));
 myData ? (tareas = myData) : (tareas = tareasDefault);
+let IDs = tareas.length + 1;
 
 function totalRealizadas() {
   return tareas.filter((tarea) => tarea.completada).length;
@@ -37,7 +40,7 @@ function renderTareas() {
 
 function guardarTareas() {
   localStorage.setItem("tareas", JSON.stringify(tareas));
-  console.log(tareas);
+  // console.log(tareas);
   if (!tareas.length) localStorage.removeItem("tareas");
 }
 
@@ -45,7 +48,6 @@ function addListeners() {
   tareas.forEach((element) => {
     //   console.log(`[data-input="${element.id}"]`);
     let checkbox = document.querySelector(`[data-input="${element.id}"]`);
-
     checkbox.addEventListener("click", (e) => {
       e.preventDefault();
       element.completada = !element.completada;
@@ -80,4 +82,19 @@ function tareaHtml(tarea) {
           </tr>`;
 }
 
-export { totalRealizadas, renderTareas, tareaHtml, tareas };
+function addEventAddBtn() {
+  btnAddtarea.addEventListener("click", (e) => {
+    e.preventDefault();
+    // console.log(input);
+    let newtarea = {
+      id: IDs,
+      nombre: input.value,
+      completada: false,
+    };
+    tareas.push(newtarea);
+    IDs++;
+    renderTareas();
+  });
+}
+
+export { totalRealizadas, renderTareas, tareaHtml, tareas, addEventAddBtn };
