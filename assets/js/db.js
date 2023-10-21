@@ -1,4 +1,4 @@
-let tareas = [
+let tareasDefault = [
   {
     id: 1,
     nombre: "Tarea 1",
@@ -21,4 +21,4 @@ let tareas = [
   },
 ];
 
-export default tareas;
+export default tareasDefault;

@@ -1,5 +1,4 @@
-import tareas from "./db.js";
-import { totalRealizadas, renderTareas, tareaHtml } from "./functions.js";
+import { renderTareas, tareas } from "./functions.js";
 
 let IDs = tareas.length + 1;
 

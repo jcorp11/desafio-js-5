@@ -1,9 +1,14 @@
-import tareas from "./db.js";
+import tareasDefault from "./db.js";
+
 import {
   tareasContainer,
   totalTareasRealizadas,
   totalTareas,
 } from "./script.js";
+
+let tareas;
+let myData = JSON.parse(localStorage.getItem("tareas"));
+myData ? (tareas = myData) : (tareas = tareasDefault);
 
 function totalRealizadas() {
   return tareas.filter((tarea) => tarea.completada).length;
@@ -27,6 +32,13 @@ function renderTareas() {
   totalTareas.innerHTML = `Total: <b>${tareas.length}</b>`;
 
   addListeners();
+  guardarTareas();
+}
+
+function guardarTareas() {
+  localStorage.setItem("tareas", JSON.stringify(tareas));
+  console.log(tareas);
+  if (!tareas.length) localStorage.removeItem("tareas");
 }
 
 function addListeners() {
@@ -68,4 +80,4 @@ function tareaHtml(tarea) {
           </tr>`;
 }
 
-export { totalRealizadas, renderTareas, tareaHtml };
+export { totalRealizadas, renderTareas, tareaHtml, tareas };
