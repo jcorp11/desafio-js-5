@@ -11,18 +11,20 @@ function totalRealizadas() {
 
 function renderTareas() {
   let html = `
-    <tr>
-      <th>ID</th>
-      <th>Tarea</th>
-      <th></th>
-      <th></th>
-    </tr>`;
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th class="task-text">Tarea</th>
+        <th class="columna">Done</th>
+        <th class="columna">Delete</th>
+      </tr>
+    </thead>`;
   tareas.forEach((tarea) => {
     html += tareaHtml(tarea);
   });
   tareasContainer.innerHTML = html;
-  totalTareasRealizadas.innerHTML = `Realizadas: ${totalRealizadas()}`;
-  totalTareas.innerHTML = `Total: ${tareas.length}`;
+  totalTareasRealizadas.innerHTML = `Realizadas: <b> ${totalRealizadas()} </b>`;
+  totalTareas.innerHTML = `Total: <b>${tareas.length}</b>`;
 
   addListeners();
 }
@@ -53,12 +55,12 @@ function tareaHtml(tarea) {
           <tr>
               <td class="id">${tarea.id}</td>
               <td class="nombre">${tarea.nombre}</td>
-              <td class="completada">
+              <td class="completada columna">
                   <input type="checkbox" data-input="${tarea.id}" ${
     tarea.completada ? "checked" : ""
   }>
               </td>
-              <td>
+              <td class="columna">
               <i class="fas fa-times" btn-id="${
                 tarea.id
               }" style="color: #dd1313;"></i>
