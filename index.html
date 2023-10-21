@@ -4,8 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Desafio js 5</title>
-    <link rel="stylesheet" href="assets/css/normalize.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
     <link
       rel="shortcut icon"
       href="assets/favicon_io/favicon-32x32.png"
@@ -25,16 +23,18 @@
       integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="assets/css/normalize.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
     <section class="main">
       <h1>To Do List</h1>
-      <br />
+      <hr />
       <section class="container-1">
         <h4>Nueva Tarea</h4>
         <section class="input-container">
           <input type="text" id="input" placeholder="Nueva Tarea" />
-          <button id="btn">Agregar</button>
+          <button class="btn btn-success" id="btn">Agregar</button>
         </section>
       </section>
       <section class="container-2">
@@ -43,7 +43,7 @@
           <p class="totalRealizadas">Realizadas:</p>
         </section>
         <section class="table-container">
-          <table class="table"></table>
+          <table class="table table-hover"></table>
         </section>
       </section>
     </section>
