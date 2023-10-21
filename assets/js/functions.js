@@ -97,4 +97,4 @@ function addEventAddBtn() {
   });
 }
 
-export { totalRealizadas, renderTareas, tareaHtml, tareas, addEventAddBtn };
+export { renderTareas, addEventAddBtn };
