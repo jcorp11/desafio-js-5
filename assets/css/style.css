@@ -42,7 +42,7 @@ h4 {
   display: flex;
   gap: 5px;
 }
-#input {
+#inputTarea {
   flex-grow: 1;
 }
 #btn {

@@ -4,7 +4,7 @@ const tareasContainer = document.querySelector(".table");
 const totalTareasRealizadas = document.querySelector(".totalRealizadas");
 const totalTareas = document.querySelector(".total");
 const btnAddtarea = document.querySelector("#btn");
-const input = document.querySelector("#input");
+const input = document.querySelector("#inputTarea");
 
 export {
   tareasContainer,
