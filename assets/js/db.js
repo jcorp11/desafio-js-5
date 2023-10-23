@@ -1,3 +1,4 @@
+// tareas por default
 let tareasDefault = [
   {
     id: 1,
@@ -21,4 +22,5 @@ let tareasDefault = [
   },
 ];
 
+// exportar tareas a otro archivo
 export default tareasDefault;
